@@ -1,0 +1,28 @@
+{
+  "name": "ngshop",
+  "description": "自动化前端工具加上angular构建一个网上商城",
+  "main": "index.js",
+  "authors": [
+    "chuhan"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "node",
+    "mongo",
+    "bootstrap"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.8",
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "ngshop",
+  "version": "1.0.0",
+  "description": "自动化前端工具加上angular构建一个网上商城",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "node",
+    "mongo",
+    "bootstrap"
+  ],
+  "author": "chuhan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

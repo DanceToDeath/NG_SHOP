@@ -1,0 +1,17 @@
+
+d:
+dir
+cd 珠峰大前端
+dir
+cd NG_SHOP
+npm init
+bower init
+doskey /history >>cmd.log
+d:
+dir
+cd 珠峰大前端
+dir
+cd NG_SHOP
+npm init
+bower init
+doskey /history >>cmd.log
