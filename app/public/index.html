@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+    <title>NG_SHOP</title>
+</head>
+<body >
+<nav class="navbar navbar-default " role="navigation" ng-controller="NavbarCtrl">
+    <div class="navbar-header">
+        <a href="#" class="navbar-brand">我的商城</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a href="#/home">首页</a></li>
+        <li><a href="#/users/reg">注册</a></li>
+        <li><a href="#/users/login">登录</a></li>
+    </ul>
+</nav>
+<div class="row" ng-view>
+</div>
+<script src="lib/jquery/dist/jquery.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-route/angular-route.js"></script>
+<script>
+    var app = angular.module('app',['ngRoute']);
+    app.config(function($routeProvider,$locationProvider){
+        $routeProvider.when('/',{
+            templateUrl:'pages/home.html',
+            controller:'HomeCtrl'
+        }).when('/home',{
+            templateUrl:'pages/home.html',
+            controller:'HomeCtrl'
+        }).when('/users/reg',{
+            templateUrl:'pages/users/reg.html',
+            controller:'RegCtrl'
+        }).when('/users/login',{
+            templateUrl:'pages/users/login.html',
+            controller:'LoginCtrl'
+        }).otherwise({
+            redirectTo:'/'
+        })
+    });
+    app.controller('HomeCtrl',function($scope){
+        $scope.title = 'hahahah商城';
+    });
+    app.controller('NavbarCtrl',function($scope){
+
+    });
+    app.controller('RegCtrl',function($scope){
+        $scope.title='注册';
+        $scope.save=function(){
+            $http({
+                url:'/users/reg',
+                method:'POST',
+                data:$scope.user
+            }).success(function(user){
+
+            }).error(function(data){
+                alert(data)
+            })
+        }
+
+    });
+    app.controller('LoginCtrl',function($scope){
+        $scope.title='登录';
+    });
+</script>
+</body>
+</html>
